@@ -3,15 +3,18 @@
 #include <string.h>
 
 void reverse(char* str) {
-    int first = 0;
-    int last = strlen(str) - 1;
-    char temp;
+    int first = 0; //initialise first index
+    int last = strlen(str) - 1; //initialise last index based on string length
+    char temp; //temporary variable for swapping
 
+    //loop until two indexes meet
     while (first < last) {
+        //swap characters at first and last index
         temp = str[first];
         str[first] = str[last];
         str[last] = temp;
 
+        //move indexes
         first++;
         last--;
     }
@@ -19,7 +22,7 @@ void reverse(char* str) {
 
 int main()
 {
-    //char str[100] = "message to be reversed";
+
     char message[100];
     printf("Enter message: ");
 
